@@ -21,6 +21,7 @@ RUN apk update && \
         zlib-dev \
         jpeg-dev \
         openssl-dev && \
+    pip install --no-cache-dir -r requirements.txt && \
     apk del \
         build-base \
         curl-dev && \

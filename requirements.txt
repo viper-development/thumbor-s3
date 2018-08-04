@@ -1,0 +1,3 @@
+envtpl==0.5.3
+thumbor==6.2.0
+tc_aws
