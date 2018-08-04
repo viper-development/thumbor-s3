@@ -29,3 +29,5 @@ RUN apk update && \
     rm -rf /tmp/*
 
 ADD . $ROOT
+
+ENTRYPOINT ["./docker-entrypoint.sh"]
