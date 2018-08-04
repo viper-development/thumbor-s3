@@ -9,4 +9,4 @@ integration which allows resizing images on the fly.
 ## Configuring thumbor-s3
 
 All the configuration can be done via environment variables. For a list of all
-the variables, please check [here](./thumbor.conf.tpl).
+the variables, please check [here](https://github.com/nkprince007/thumbor-s3/blob/master/thumbor.conf.tpl).
