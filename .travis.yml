@@ -1,0 +1,27 @@
+sudo: required
+
+services:
+  - docker
+
+env:
+  global:
+    - IMAGE_NAME=nkprince007/thumbor-s3
+
+before_script:
+  - docker login -u "$REGISTRY_USER" -p "$REGISTRY_PASS"
+  - docker pull "$IMAGE_NAME" || true
+
+script:
+  - docker build --pull --cache-from "$IMAGE_NAME" --tag "$IMAGE_NAME" .
+
+after_script:
+  - docker images
+
+before_deploy:
+  - docker tag "$IMAGE_NAME" "${IMAGE_NAME}:latest"
+
+deploy:
+  provider: script
+  script: docker push "${IMAGE_NAME}:latest"
+  on:
+    branch: master
