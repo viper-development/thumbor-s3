@@ -31,3 +31,4 @@ RUN apk update && \
 ADD . $ROOT
 
 ENTRYPOINT ["./docker-entrypoint.sh"]
+CMD ["thumbor"]
