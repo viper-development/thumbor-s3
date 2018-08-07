@@ -5,7 +5,7 @@ services:
 
 env:
   global:
-    - IMAGE_NAME=nkprince007/thumbor-s3
+    - IMAGE_NAME=viperdev/thumbor-s3
 
 before_script:
   - docker login -u "$REGISTRY_USER" -p "$REGISTRY_PASS"
