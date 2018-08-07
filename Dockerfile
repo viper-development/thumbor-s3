@@ -1,6 +1,6 @@
 FROM python:2-alpine3.6
 
-LABEL MAINTAINER naveenkumarsangi@protonmail.com
+LABEL MAINTAINER naveen.sangi@viperdev.io
 
 ENV ROOT=/opt/local/thumbor USER=thumbor PORT=8000 UID=1000
 
