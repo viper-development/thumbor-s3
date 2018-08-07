@@ -12,11 +12,8 @@ WORKDIR $ROOT
 
 ADD requirements.txt $ROOT
 
-RUN apk update && \
-    apk upgrade && \
-    apk add --update --no-cache \
+RUN apk add --no-cache \
         build-base \
-        curl \
         curl-dev \
         zlib-dev \
         jpeg-dev \
