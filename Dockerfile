@@ -29,4 +29,3 @@ RUN apk add --no-cache \
 ADD . $ROOT
 
 ENTRYPOINT ["./docker-entrypoint.sh"]
-CMD ["thumbor"]
