@@ -10,6 +10,7 @@ if [ -n "$LOG_LEVEL" ]; then
 fi
 
 if [ "$1" = 'thumbor' ]; then
+    echo "Starting thumbor server on port $PORT..."
     exec thumbor \
         --port=$PORT \
         --conf=thumbor.conf \
