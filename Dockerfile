@@ -15,6 +15,7 @@ ADD requirements.txt $ROOT
 RUN apk add --no-cache \
         build-base \
         curl-dev \
+        curl \
         zlib-dev \
         jpeg-dev \
         openssl-dev && \
