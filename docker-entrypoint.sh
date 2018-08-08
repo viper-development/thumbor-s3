@@ -9,12 +9,8 @@ if [ -n "$LOG_LEVEL" ]; then
     LOG_PARAMETER="-l $LOG_LEVEL"
 fi
 
-if [ "$1" = 'thumbor' ]; then
-    echo "Starting thumbor server on port $PORT..."
-    exec thumbor \
-        --port=$PORT \
-        --conf=thumbor.conf \
-        $LOG_PARAMETER
-fi
-
-exec "$@"
+echo "Starting thumbor server on port $PORT..."
+exec thumbor \
+     --port=$PORT \
+     --conf=thumbor.conf \
+     $LOG_PARAMETER
